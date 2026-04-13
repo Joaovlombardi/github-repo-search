@@ -1,7 +1,12 @@
-export default function Home() {
-    return (
-        <div>
-            <h1>GitHub Repo Search</h1>
-        </div>
-    );
+import SearchBar from "../components/SearchBar";
+
+function Home() {
+  return (
+    <div>
+      <h1>Github Repo Search</h1>
+      <SearchBar />
+    </div>
+  );
 }
+
+export default Home;
