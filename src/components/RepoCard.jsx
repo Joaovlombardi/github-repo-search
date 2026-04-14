@@ -4,14 +4,26 @@ function RepoCard({ repo }) {
   }
 
   return (
-    <div>
-      <h2>{repo.full_name}</h2>
-      <p>{repo.description}</p>
-      <span>{repo.stargazers_count.toLocaleString("pt-BR")} stars</span>
-      <span>{formatDate(repo.updated_at)}</span>
-      <a href={repo.html_url} target="_blank">
-        Ver no GitHub
-      </a>
+    <div className="bg-white border border-gray-200 rounded-xl p-5 flex items-start justify-between gap-4">
+      <div className="flex-1 min-w-0">
+        <a
+          href={repo.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 font-medium text-base hover:underline"
+        >
+          {repo.full_name}
+        </a>
+        <p className="text-gray-500 text-sm mt-1 mb-3">{repo.description}</p>
+        <div className="flex items-center gap-2 text-sm text-gray-500">
+          <span className="text-amber-400">★</span>
+          <span className="font-medium text-gray-700">
+            {repo.stargazers_count.toLocaleString("pt-BR")} stars
+          </span>
+          <span className="text-gray-300">|</span>
+          <span>Updated on {formatDate(repo.updated_at)}</span>
+        </div>
+      </div>
     </div>
   );
 }
