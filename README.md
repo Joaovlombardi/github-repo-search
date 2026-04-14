@@ -1,30 +1,26 @@
 # GitHub Repo Search
+Web application to search for GitHub repositories using a text input field.
 
-Aplicação web para buscar repositórios no GitHub a partir de um campo de texto.
+## Features
+- Search repositories by name
+- Sort by stars or last updated date
+- Pagination of results
+- Error handling and loading states
 
-## Funcionalidades
-
-- Busca de repositórios por nome
-- Ordenação por estrelas ou data de atualização
-- Paginação dos resultados
-- Tratamento de erros e estados de loading
-
-## Tecnologias
-
+## Technologies
 - React
 - Vite
 - Tailwind CSS
 
-## Como rodar
+## How to run
+Clone the repository:
+git clone <repository-url>
 
-Clone o repositório:
-git clone https://github.com/seu-usuario/github-repo-search
-
-Instale as dependências:
+Install dependencies:
 npm install
 
-Rode o projeto:
+Run the project:
 npm run dev
 
-Acesse no navegador:
+Open in your browser:
 http://localhost:5173

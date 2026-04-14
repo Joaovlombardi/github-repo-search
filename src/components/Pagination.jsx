@@ -1,7 +1,6 @@
 function Pagination({ page, totalPages, onPageChange }) {
   const pages = [];
 
-  // monta array com até 3 páginas: anterior, atual e próxima
   for (let i = Math.max(1, page - 1); i <= Math.min(totalPages, page + 1); i++) {
     pages.push(i);
   }

@@ -20,10 +20,20 @@ function Home() {
   } = useGithubSearch();
 
   const totalPages = Math.min(Math.ceil(totalCount / 10), 100);
-  // math.min limita a 100 páginas, math.ceil arredonda pra cima
-  
+
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4">
+      <div className="text-center mb-8 py-2">
+        <img
+          src="Public/github-logo-preta.png"
+          alt="GitHub Logo"
+          className="w-12 h-12 mx-auto mb-3"
+        />
+        <h1 className="text-2xl font-semibold text-gray-900 mb-1">
+          GitHub Repo Search
+        </h1>
+      </div>
+
       <div className="max-w-3xl mx-auto">
         <SearchBar
           value={inputValue}
@@ -36,12 +46,12 @@ function Home() {
         {error && <p className="text-center text-red-500 py-10">{error}</p>}
 
         {loading && (
-          <p className="text-center text-gray-400 py-10">Carregando...</p>
+          <p className="text-center text-gray-400 py-10">Loading...</p>
         )}
 
         {!loading && !error && repos.length === 0 && (
           <p className="text-center text-gray-400 py-10">
-            Digite um termo para buscar repositórios.
+            Enter a term to search for repositories.
           </p>
         )}
 
