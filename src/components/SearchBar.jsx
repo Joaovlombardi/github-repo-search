@@ -1,7 +1,13 @@
-function SearchBar() {
+function SearchBar({ value, onChange, onSearch }) {
   return (
     <div>
-      <h1>Componente SearchBar</h1>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder="Search repositories..."
+      />
+      <button onClick={onSearch}>Search</button>
     </div>
   );
 }
