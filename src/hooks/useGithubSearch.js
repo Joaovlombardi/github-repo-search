@@ -18,7 +18,19 @@ function useGithubSearch() {
       try {
         const response = await fetch(
           `https://api.github.com/search/repositories?q=${query}&sort=${sort}&order=desc&per_page=10&page=${page}`,
+          {
+            headers: {
+              Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
+              Accept: "application/vnd.github+json",
+            },
+          },
         );
+
+        if (response.status === 403) {
+          throw new Error(
+            "Limite de requisições atingido. Aguarde alguns segundos.",
+          );
+        }
 
         if (!response.ok) throw new Error("Erro ao buscar repositórios");
 
@@ -30,6 +42,7 @@ function useGithubSearch() {
       } finally {
         setLoading(false);
       }
+      console.log(import.meta.env.VITE_GITHUB_TOKEN);
     }
 
     if (query) fetchRepos();
