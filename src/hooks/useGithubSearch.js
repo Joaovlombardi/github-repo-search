@@ -42,7 +42,6 @@ function useGithubSearch() {
       } finally {
         setLoading(false);
       }
-      console.log(import.meta.env.VITE_GITHUB_TOKEN);
     }
 
     if (query) fetchRepos();
