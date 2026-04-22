@@ -3,7 +3,7 @@ import SearchBar from "../components/SearchBar";
 import RepoCard from "../components/RepoCard";
 import SortButtons from "../components/SortButtons";
 import Pagination from "../components/Pagination";
-import githubLogo from "../../public/github-logo-preta.png";
+import githubLogo from "/github-logo-preta.png";
 
 function Home() {
   const {
