@@ -25,7 +25,7 @@ function Home() {
     <div className="min-h-screen bg-gray-100 py-10 px-4">
       <div className="text-center mb-8 py-2">
         <img
-          src="Public/github-logo-preta.png"
+          src="/github-logo-preta.png"
           alt="GitHub Logo"
           className="w-12 h-12 mx-auto mb-3"
         />
