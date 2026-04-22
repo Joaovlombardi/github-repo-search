@@ -3,6 +3,7 @@ import SearchBar from "../components/SearchBar";
 import RepoCard from "../components/RepoCard";
 import SortButtons from "../components/SortButtons";
 import Pagination from "../components/Pagination";
+import githubLogo from "../../public/github-logo-preta.png";
 
 function Home() {
   const {
@@ -25,7 +26,7 @@ function Home() {
     <div className="min-h-screen bg-gray-100 py-10 px-4">
       <div className="text-center mb-8 py-2">
         <img
-          src="/github-logo-preta.png"
+          src={githubLogo}
           alt="GitHub Logo"
           className="w-12 h-12 mx-auto mb-3"
         />
